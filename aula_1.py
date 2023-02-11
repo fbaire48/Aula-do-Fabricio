@@ -1,32 +1,124 @@
-class Atividades():
-	#Atividade 1
-	def media(self):
-		lista=[1,2,3,4,5]
-		media=sum(lista)/len(lista)
+class Dia_um:
+	def media(self,pedido):
+		self.pedido=pedido
+
+		espaco=[]
+
+
+		for identificacao in range(1,self.pedido+1):
+			numero=float(input())
+			espaco.append(numero)
+
+
+		media=sum(espaco)/len(espaco)
+
 		print(media)
-	#Atividade 2 (metodo 1)
-	def metodo_intuitivo(self):
-		lista=['c','m','b']
-		for foco_e_espectro in range(0,len(lista)):
-			for participantes_da_lista in range(0,len(lista)):
-				if lista[foco_e_espectro]>lista[participantes_da_lista]:
-					maior=lista[foco_e_espectro]
-					menor=lista[participantes_da_lista]
-					lista[foco_e_espectro]=menor
-					lista[participantes_da_lista]=maior
-		lista.reverse()
-		print(lista)
-	#Atividade 3 (metodo 2)
-	def auto_inverte(self):
-		lista=['ceara','maranhao','bahia']
-		for foco_e_espectro in range(0,len(lista)):
-			for participantes_da_lista in range(0,len(lista)):
-				if lista[foco_e_espectro]<lista[participantes_da_lista]:
-					maior=lista[participantes_da_lista]
-					menor=lista[foco_e_espectro]
-					lista[foco_e_espectro]=maior
-					lista[participantes_da_lista]=menor
-		print(lista)
-#a=Atividades().media()
-#b=Atividades().metodo_intuitivo()
-#c=Atividades().auto_inverte()
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#Metodo intuitivo
+	def ordem_alfabetica(self):
+		letras=['c','m','b']
+
+
+
+
+	
+
+
+		for foco_e_espectro in range(0,len(letras)):
+			for participantes_da_linha in range(0,len(letras)):
+				if letras[foco_e_espectro]>letras[participantes_da_linha]:
+					maior=letras[foco_e_espectro]
+					menor=letras[participantes_da_linha]
+
+					letras[foco_e_espectro]=menor
+					letras[participantes_da_linha]=maior
+
+
+
+
+		letras_final=[]
+
+
+
+
+
+		for caractere in letras:
+			letras_final=[caractere]+letras_final
+
+
+
+		print(letras_final)
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#Metodo auto-inverte
+	def ordem_alfabetica_cidades(self):
+		cidades=['ceara','maranhao','bahia']
+
+
+
+
+
+
+
+		for foco_e_espectro in range(0,len(cidades)):
+			for participantes_da_linha in range(0,len(cidades)):
+				if cidades[foco_e_espectro]<cidades[participantes_da_linha]:
+					maior=cidades[participantes_da_linha]
+					menor=cidades[foco_e_espectro]
+
+					cidades[foco_e_espectro]=maior
+					cidades[participantes_da_linha]=menor
+
+
+
+
+
+		print(cidades)
+
+#a=Dia_um().media()
+#b=Dia_um().ordem_alfabetica()
+#c=Dia_um().ordem_alfabetica_cidades()
+
