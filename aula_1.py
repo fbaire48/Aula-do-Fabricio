@@ -118,7 +118,7 @@ class Dia_um:
 
 		print(cidades)
 
-#a=Dia_um().media()
+#a=Dia_um().media(5)
 #b=Dia_um().ordem_alfabetica()
 #c=Dia_um().ordem_alfabetica_cidades()
 
